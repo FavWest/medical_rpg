@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SelectPatientFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/select_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/initial_select_msg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/patient1_context_text"
+            app:layout_constraintTop_toBottomOf="@id/select_context"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/patient1_triage_text"
+            app:layout_constraintEnd_toStartOf="@id/select_patient1_button"
+            style="@style/choice_description" />
+
+        <Button
+            android:id="@+id/select_patient1_button"
+            android:text="@string/select_patient_button"
+            app:layout_constraintBottom_toBottomOf="@+id/patient1_context_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/patient1_context_text"
+            app:layout_constraintTop_toTopOf="@+id/patient1_context_text"
+            style="@style/select_patient" />
+
+        <TextView
+            android:id="@+id/patient2_context_text"
+            app:layout_constraintTop_toBottomOf="@id/patient1_context_text"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/patient2_triage_text"
+            app:layout_constraintEnd_toStartOf="@id/select_patient1_button"
+            style="@style/choice_description"/>
+
+        <Button
+            android:id="@+id/select_patient2_button"
+            android:text="@string/select_patient_button"
+            app:layout_constraintBottom_toBottomOf="@id/patient2_context_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/patient2_context_text"
+            app:layout_constraintTop_toTopOf="@+id/patient2_context_text"
+            style="@style/select_patient"/>
+
+        <TextView
+            android:id="@+id/patient3_context_text"
+            app:layout_constraintTop_toBottomOf="@id/patient2_context_text"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/patient3_triage_text"
+            app:layout_constraintEnd_toStartOf="@id/select_patient2_button"
+            style="@style/choice_description"/>
+
+        <Button
+            android:id="@+id/select_patient3_button"
+            android:text="@string/select_patient_button"
+            app:layout_constraintBottom_toBottomOf="@id/patient3_context_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/patient3_context_text"
+            app:layout_constraintTop_toTopOf="@+id/patient3_context_text"
+            style="@style/select_patient"/>
+
+        <TextView
+            android:id="@+id/patient4_context_text"
+            app:layout_constraintTop_toBottomOf="@id/patient3_context_text"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/patient4_triage_text"
+            app:layout_constraintEnd_toStartOf="@id/select_patient4_button"
+            style="@style/choice_description"/>
+
+        <Button
+            android:id="@+id/select_patient4_button"
+            android:text="@string/select_patient_button"
+            app:layout_constraintBottom_toBottomOf="@id/patient4_context_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/patient4_context_text"
+            app:layout_constraintTop_toTopOf="@+id/patient4_context_text"
+            style="@style/select_patient"/>
+
+        <TextView
+            android:id="@+id/place_orders_context_text"
+            app:layout_constraintTop_toBottomOf="@id/patient4_context_text"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/place_orders_before_seeing_patients"
+            app:layout_constraintEnd_toStartOf="@id/place_orders_button"
+            style="@style/choice_description"
+            android:layout_marginBottom="32dp"/>
+
+        <Button
+            android:id="@+id/place_orders_button"
+            android:text="@string/place_orders"
+            app:layout_constraintBottom_toBottomOf="@id/place_orders_context_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/place_orders_context_text"
+            app:layout_constraintTop_toTopOf="@+id/place_orders_context_text"
+            style="@style/select_patient"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

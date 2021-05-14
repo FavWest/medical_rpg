@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">MedicalRPG</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_title">Emergency Department Doctor</string>
+    <string name="short_game_description">You\'re the doctor at the ED. Make treatment decisions for your patients</string>
+    <string name="disclaimer">Note: While the game creators have tried to provide a realistic game and accurate information, this is a free, small-scale project and is not consistently updated or rigorously fact-checked. It may contain errors and is not suitable as a substitute for medical advice or medical education.</string>
+    <string name="start_new_game">Start New Game</string>
+    <string name="initial_select_msg">You arrive at the ED a few minutes before the shift starts at 1800. Four patients have arrived recently who haven\'t been seen yet. Who would you like to see first?</string>
+    <string name="patient1_triage_text">A 36 year old male with intense flank pain marked as yellow who arrived 12 minutes ago.</string>
+    <string name="select_patient_button">See this patient</string>
+    <string name="patient2_triage_text">A 24 year old female with chest pain marked yellow who arrived 5 minutes ago</string>
+    <string name="patient3_triage_text">A 78 year old male on Xaralto who fell and struck his head marked orange</string>
+    <string name="patient4_triage_text">A 30 year old male brought in by ambulance for bugs crawling under his skin,marked orange</string>
+    <string name="place_orders">Place orders</string>
+    <string name="place_orders_before_seeing_patients">Place orders before seeing patients</string>
+    <string name="patient1_intro">The man is leaning over the bed, groaning, one hand on his flank. The nurse has placed an IV in his left arm. You introduce yourself and ask "What's going on today?"
+
+Between grimaces, the man says, "I've got a lot of pain in my left side. Feels like a kidney stone."
+
+The patient reports 9/10 pain, nausea and no other symptoms.
+
+The patient denies any major medical history or previous surgeries. What medications would you like to order?
+</string>
+    <string name="orders">Alternative format
+            Opioid pain med: morphine 4mg, Dilaudid hydromorphone 0.5 mg, or nothing
+
+            Non-opioid analgesics: Toradol (ketorolac) 15 mg or 30 mg, and/or lidocaine IV piggyback
+
+            Nausea medicine: Zofran (ondansetron) 4mg IV, Benadryl (diphenhydramine) 12.5 mg IV, Phenergan 12.5 mg IV piggyback.
+
+            Fluids: Normal saline (0.9% sodium chloride) 1 liter bolus, Lactated Ringers 1 liter bolus, Normal saline (0.9% sodium chloride) 100 mL per hour, Lactated Ringers 100 mL per hour
+
+            What tests would you order?
+            Blood work: CBC, CMP or BMP, lipase, lactic acid
+            Urine: urinalysis, DOA
+            Imaging: Ultrasound (kidney), ultrasound (gallbladder), CT abdomen</string>
+    <string name="morphine_4mg">morphine 4mg</string>
+    <string name="dilaudid_hydromorphone_0_5_mg">Dilaudid (hydromorphone) 0.5 mg</string>
+    <string name="complete">Complete</string>
 </resources>

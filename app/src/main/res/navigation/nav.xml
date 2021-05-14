@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.favwest.medicalrpg.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_selectPatientFragment"
+            app:destination="@id/selectPatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patient1Fragment"
+        android:name="com.favwest.medicalrpg.Patient1Fragment"
+        android:label="fragment_patient1"
+        tools:layout="@layout/fragment_patient1" />
+    <fragment
+        android:id="@+id/selectPatientFragment"
+        android:name="com.favwest.medicalrpg.SelectPatientFragment"
+        android:label="fragment_select_patient"
+        tools:layout="@layout/fragment_select_patient" >
+        <action
+            android:id="@+id/action_selectPatientFragment_to_patient1Fragment"
+            app:destination="@id/patient1Fragment" />
+    </fragment>
+</navigation>
