@@ -38,4 +38,6 @@ The patient denies any major medical history or previous surgeries. What medicat
     <string name="morphine_4mg">morphine 4mg</string>
     <string name="dilaudid_hydromorphone_0_5_mg">Dilaudid (hydromorphone) 0.5 mg</string>
     <string name="complete">Complete</string>
+    <string name="sign_orders">Sign Orders and Finalize Treatment Decision</string>
+    <string name="pain_management_start_msg">Pain Management:\nClick to Select</string>
 </resources>

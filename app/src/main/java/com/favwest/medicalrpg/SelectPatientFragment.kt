@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.favwest.medicalrpg.databinding.FragmentSelectPatientBinding
 
 class SelectPatientFragment : Fragment() {
@@ -15,6 +16,9 @@ class SelectPatientFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentSelectPatientBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_select_patient, container, false)
+        binding.selectPatient1Button.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_selectPatientFragment_to_patient1Fragment)
+        )
         return binding.root
     }
 }

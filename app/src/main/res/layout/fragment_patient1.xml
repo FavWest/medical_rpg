@@ -8,10 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp">
+            android:layout_margin="16dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/patient1_intro"
@@ -20,27 +21,33 @@
                 android:text="@string/patient1_intro" />
 
             <Button
-                android:id="@+id/pain_management_options"
+                android:id="@+id/pain_management"
                 android:backgroundTint="@color/red"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="32dp"
-                android:text="Pain Management:\n Click to Select"
+                android:layout_marginTop="32dp"
+                android:text="@string/pain_management_start_msg"
                 android:textSize="16sp"
                 android:gravity="center"
+                android:layout_gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/patient1_intro"
                  />
 
+            <LinearLayout
+                android:id="@+id/pain_management_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/pain_management">
+
             <Button
                 android:id="@+id/morphine"
                 android:text="@string/morphine_4mg"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pain_management_options"
+                android:layout_gravity="center"
                 style="@style/order_button"
                 android:layout_marginTop="16dp"/>
 
@@ -49,37 +56,31 @@
             <Button
                 android:id="@+id/dilaudid"
                 android:text="@string/dilaudid_hydromorphone_0_5_mg"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/morphine"
+                android:layout_gravity="center"
                 style="@style/order_button"/>
 
-            <Button
-                android:id="@+id/place_orders_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/dilaudid"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/complete"
-                android:layout_marginTop="16dp"
-                />
+                <Button
+                    android:id="@+id/place_orders_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/complete"
+                    android:layout_marginTop="16dp"
+                    />
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/sign_orders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/place_orders_button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="Sign Orders and Finalize Treatment Decision"
+                android:text="@string/sign_orders"
                 android:layout_marginTop="16dp"
                 />
 
             <!--TODO sign-orders onclick: if not all areas have a selection: "Do you want to continue without making all selections?"-->
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </ScrollView>
 </layout>
