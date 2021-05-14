@@ -17,4 +17,10 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:backgroundTint">@color/red</item>
     </style>
+
+    <style name="selected_order_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/blue</item>
+    </style>
 </resources>
