@@ -11,6 +11,7 @@ import com.favwest.medicalrpg.databinding.FragmentPatient1Binding
 
 class Patient1Fragment : Fragment() {
     lateinit var binding: FragmentPatient1Binding
+    lateinit var painMngButtons: List<Button>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,10 +21,13 @@ class Patient1Fragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_patient1, container, false)
         binding.apply {
             painManagement.setOnClickListener {showPainManagementOptions()}
-            completePainManagement.setOnClickListener {hidePainManagementOptions()}
-            val painMngButtons = listOf(morphine, dilaudid)
+            completePainManagement.setOnClickListener { hidePainManagementOptions() }
+            painMngButtons = listOf(morphine, dilaudid)
             for (button in painMngButtons) {
-                button.setOnClickListener{changeButtonSelected(button)}
+                button.setOnClickListener{
+                    changeButtonSelected(button)
+                    displayPainManagementSelections()
+                }
             }
         }
         return binding.root
@@ -37,6 +41,22 @@ class Patient1Fragment : Fragment() {
     private fun hidePainManagementOptions() {
         if (binding.painManagementOptions.visibility == View.VISIBLE)
             binding.painManagementOptions.visibility = View.GONE
+    }
+
+    private fun displayPainManagementSelections() {
+        var textChange = ""
+        for(button in painMngButtons) {
+            if(button.isSelected) textChange += button.text.toString() + "\n"
+        }
+        if(textChange.length > 0) {
+            textChange = textChange.slice(0.. textChange.length-2).toString()
+            val message = "Pain Management:\n" + textChange
+            binding.painManagement.text = message
+            binding.painManagement.setBackgroundColor(resources.getColor(R.color.blue))
+        } else {
+            binding.painManagement.text = getString(R.string.pain_management_start_msg)
+            binding.painManagement.setBackgroundColor(resources.getColor(R.color.red))
+        }
     }
 
     private fun changeButtonSelected(button: Button) {
