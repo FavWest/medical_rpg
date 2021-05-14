@@ -22,8 +22,7 @@ The patient reports 9/10 pain, nausea and no other symptoms.
 
 The patient denies any major medical history or previous surgeries. What medications would you like to order?
 </string>
-    <string name="orders">Alternative format
-            Opioid pain med: morphine 4mg, Dilaudid hydromorphone 0.5 mg, or nothing
+    <string name="orders">
 
             Non-opioid analgesics: Toradol (ketorolac) 15 mg or 30 mg, and/or lidocaine IV piggyback
 
@@ -40,4 +39,8 @@ The patient denies any major medical history or previous surgeries. What medicat
     <string name="complete">Complete</string>
     <string name="sign_orders">Sign Orders and Finalize Treatment Decision</string>
     <string name="pain_management_start_msg">Pain Management:\nClick to Select</string>
+    <string name="no_medications">no medications</string>
+    <string name="lidocaine_iv_piggyback">Lidocaine IV piggyback</string>
+    <string name="toradol_ketorolac_30_mg">Toradol (ketorolac) 30 mg</string>
+    <string name="toradol_ketorolac_15_mg">Toradol (ketorolac) 15 mg</string>
 </resources>

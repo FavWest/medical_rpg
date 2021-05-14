@@ -43,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@id/pain_management"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
             <Button
                 android:id="@+id/morphine"
@@ -52,23 +53,29 @@
                 style="@style/order_button"
                 android:layout_marginTop="16dp"/>
 
-            <!--TODO change button to blue when clicked, select as many as you want -->
-
             <Button
                 android:id="@+id/dilaudid"
                 android:text="@string/dilaudid_hydromorphone_0_5_mg"
                 android:layout_gravity="center"
                 style="@style/order_button"/>
 
-                <Button
-                    android:id="@+id/complete_pain_management"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/complete"
-                    android:layout_marginTop="16dp"
-                    />
+            <Button
+                android:id="@+id/toradol15"
+                android:text="@string/toradol_ketorolac_15_mg"
+                android:layout_gravity="center"
+                style="@style/order_button"/>
 
+            <Button
+                android:id="@+id/toradol30"
+                android:text="@string/toradol_ketorolac_30_mg"
+                android:layout_gravity="center"
+                style="@style/order_button"/>
+
+            <Button
+                android:id="@+id/lidocaine"
+                android:text="@string/lidocaine_iv_piggyback"
+                android:layout_gravity="center"
+                style="@style/order_button"/>
             </LinearLayout>
 
             <Button
