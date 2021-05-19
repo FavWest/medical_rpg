@@ -18,7 +18,11 @@
         android:id="@+id/patient1Fragment"
         android:name="com.favwest.medicalrpg.Patient1Fragment"
         android:label="fragment_patient1"
-        tools:layout="@layout/fragment_patient1" />
+        tools:layout="@layout/fragment_patient1" >
+        <action
+            android:id="@+id/action_patient1Fragment_to_selectPatientFragment"
+            app:destination="@id/selectPatientFragment" />
+    </fragment>
     <fragment
         android:id="@+id/selectPatientFragment"
         android:name="com.favwest.medicalrpg.SelectPatientFragment"

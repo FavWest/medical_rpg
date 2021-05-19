@@ -6,8 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.favwest.medicalrpg.databinding.FragmentPatient1Binding
 
 class Patient1Fragment : Fragment() {
@@ -16,7 +19,7 @@ class Patient1Fragment : Fragment() {
     private lateinit var nauseaButtons: List<Button>
     private lateinit var fluidButtons: List<Button>
     private lateinit var testsButtons: List<Button>
-    
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,6 +39,9 @@ class Patient1Fragment : Fragment() {
             for (button in nauseaButtons) { setButtonListener(binding.nausea, "Nausea", button, nauseaButtons) }
             for (button in fluidButtons) { setButtonListener(binding.fluids, "Fluids", button, fluidButtons) }
             for (button in testsButtons) { setButtonListener(binding.tests, "Tests", button, testsButtons) }
+            signOrders.setOnClickListener {
+                it.findNavController().navigate(R.id.action_patient1Fragment_to_selectPatientFragment)
+            }
         }
         return binding.root
     }
