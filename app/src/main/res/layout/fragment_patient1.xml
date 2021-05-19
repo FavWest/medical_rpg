@@ -22,20 +22,8 @@
 
             <Button
                 android:id="@+id/pain_management"
-                android:backgroundTint="@color/red"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 android:text="@string/pain_management_start_msg"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/patient1_intro"
-                 />
+                style="@style/category_button" />
 
             <LinearLayout
                 android:id="@+id/pain_management_options"
@@ -43,41 +31,167 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@id/pain_management"
-                android:visibility="gone"
-                tools:visibility="visible">
+                android:visibility="gone">
 
             <Button
                 android:id="@+id/morphine"
                 android:text="@string/morphine_4mg"
-                android:layout_gravity="center"
                 style="@style/order_button"
                 android:layout_marginTop="16dp"/>
 
             <Button
                 android:id="@+id/dilaudid"
                 android:text="@string/dilaudid_hydromorphone_0_5_mg"
-                android:layout_gravity="center"
                 style="@style/order_button"/>
 
             <Button
                 android:id="@+id/toradol15"
                 android:text="@string/toradol_ketorolac_15_mg"
-                android:layout_gravity="center"
                 style="@style/order_button"/>
 
             <Button
                 android:id="@+id/toradol30"
                 android:text="@string/toradol_ketorolac_30_mg"
-                android:layout_gravity="center"
                 style="@style/order_button"/>
 
             <Button
                 android:id="@+id/lidocaine"
                 android:text="@string/lidocaine_iv_piggyback"
-                android:layout_gravity="center"
                 style="@style/order_button"/>
             </LinearLayout>
 
+            <Button
+                android:id="@+id/nausea"
+                android:text="@string/nausea_medicine_start_msg"
+                style="@style/category_button"
+                />
+
+            <LinearLayout
+                android:id="@+id/nausea_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/zofran"
+                    android:text="@string/zofran_ondansetron_4mg_iv"
+                    style="@style/order_button"
+                    android:layout_marginTop="16dp"/>
+
+                <Button
+                    android:id="@+id/benadryl"
+                    android:text="@string/benadryl_diphenhydramine_12_5_mg_iv"
+                    style="@style/order_button"/>
+
+                <Button
+                    android:id="@+id/phenergan"
+                    android:text="@string/phenergan_12_5_mg_iv_piggyback"
+                    style="@style/order_button"/>
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/fluids"
+            android:text="@string/fluids_start_msg"
+            style="@style/category_button"
+            />
+
+        <LinearLayout
+            android:id="@+id/fluids_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/saline_bolus"
+                android:text="@string/normal_saline_0_9_sodium_chloride_1_liter_bolus"
+                style="@style/order_button"/>
+
+            <Button
+                android:id="@+id/ringers_bolus"
+                android:text="@string/lactated_ringers_1_liter_bolus"
+                style="@style/order_button"/>
+
+            <Button
+                android:id="@+id/saline_100mL"
+                android:text="@string/normal_saline_0_9_sodium_chloride_100_ml_per_hour"
+                style="@style/order_button"/>
+
+            <Button
+                android:id="@+id/ringer_100mL"
+                android:text="@string/lactated_ringers_100_ml_per_hour"
+                style="@style/order_button"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tests"
+            android:text="@string/tests_start_msg"
+            style="@style/category_button"
+            />
+
+        <LinearLayout
+            android:id="@+id/tests_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/cbc"
+                android:text="@string/bloodwork_cbc"
+                style = "@style/order_button"
+                />
+
+            <Button
+                android:id="@+id/cmp"
+                android:text="@string/bloodwork_cmp_or_bmp"
+                style = "@style/order_button"
+                />
+
+            <Button
+                android:id="@+id/lipase"
+                android:text="@string/bloodwork_lipase"
+                style = "@style/order_button"
+                />
+
+            <Button
+                android:id="@+id/lactic_acid"
+                android:text="@string/bloodwork_lactic_acid"
+                style = "@style/order_button"
+                />
+
+            <Button
+                android:id="@+id/urinalysis"
+                android:text="@string/bloodwork_urinalysis"
+                style = "@style/order_button"
+                />
+
+            <Button
+                android:id="@+id/doa"
+                android:text="@string/urine_doa"
+                style = "@style/order_button"
+                />
+
+            <Button
+                android:id="@+id/kidney"
+                android:text="@string/urine_ultrasound_kidney"
+                style = "@style/order_button"
+                />
+
+            <Button
+                android:id="@+id/gallbladder"
+                android:text="@string/imaging_ultrasound_gallbladder"
+                style = "@style/order_button"
+                />
+
+            <Button
+                android:id="@+id/abdomen"
+                android:text="@string/imaging_ct_abdomen"
+                style = "@style/order_button"
+                />
+
+        </LinearLayout>
             <Button
                 android:id="@+id/sign_orders"
                 android:layout_width="wrap_content"
@@ -85,6 +199,7 @@
                 android:text="@string/sign_orders"
                 android:layout_marginTop="16dp"
                 />
+
 
             <!--TODO sign-orders onclick: if not all areas have a selection: "Do you want to continue without making all selections?"-->
 
