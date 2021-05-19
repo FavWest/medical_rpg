@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.favwest.medicalrpg.databinding.FragmentPatient1Binding
@@ -12,7 +13,10 @@ import com.favwest.medicalrpg.databinding.FragmentPatient1Binding
 class Patient1Fragment : Fragment() {
     private lateinit var binding: FragmentPatient1Binding
     private lateinit var painMngButtons: List<Button>
-
+    private lateinit var nauseaButtons: List<Button>
+    private lateinit var fluidButtons: List<Button>
+    private lateinit var testsButtons: List<Button>
+    
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,58 +24,45 @@ class Patient1Fragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_patient1, container, false)
         binding.apply {
-            painManagement.setOnClickListener {togglePainManagementOptions()}
+            painManagement.setOnClickListener {toggleOptions(painManagementOptions)}
+            nausea.setOnClickListener{ toggleOptions(nauseaOptions) }
+            fluids.setOnClickListener{ toggleOptions(fluidsOptions) }
+            tests.setOnClickListener{ toggleOptions(testsOptions) }
             painMngButtons = listOf(morphine, dilaudid, toradol15, toradol30, lidocaine)
-            for (button in painMngButtons) {
-                when (button) {
-                    toradol15 -> {
-                        button.setOnClickListener {
-                        changeButtonSelected(button)
-                        incompatibleSelection(button, toradol30)
-                        displayPainManagementSelections()
-                        }
-                    }
-                    toradol30 -> {
-                        button.setOnClickListener {
-                            changeButtonSelected(button)
-                            incompatibleSelection(button, toradol15)
-                            displayPainManagementSelections()
-                        }
-                    }
-                    else -> {
-                        button.setOnClickListener {
-                            changeButtonSelected(button)
-                            displayPainManagementSelections()
-                        }
-                    }
-                }
-            }
+            nauseaButtons = listOf(zofran, benadryl, phenergan)
+            fluidButtons = listOf(salineBolus, ringersBolus, saline100mL, ringer100mL)
+            testsButtons = listOf(cbc, cmp, lipase, lacticAcid, urinalysis, doa, kidney, gallbladder, abdomen)
+            for (button in painMngButtons) { setButtonListener(binding.painManagement, "Pain Management", button, painMngButtons) }
+            for (button in nauseaButtons) { setButtonListener(binding.nausea, "Nausea", button, nauseaButtons) }
+            for (button in fluidButtons) { setButtonListener(binding.fluids, "Fluids", button, fluidButtons) }
+            for (button in testsButtons) { setButtonListener(binding.tests, "Tests", button, testsButtons) }
         }
         return binding.root
     }
 
-    private fun togglePainManagementOptions() {
-        if (binding.painManagementOptions.visibility == View.VISIBLE)
-            binding.painManagementOptions.visibility = View.GONE
-        else
-            binding.painManagementOptions.visibility = View.VISIBLE
-    }
-
-    private fun displayPainManagementSelections() {
-        var textChange = ""
-        for(button in painMngButtons) {
-            if(button.isSelected) textChange += button.text.toString() + "\n"
-        }
-        if(textChange.isNotEmpty()) {
-            textChange = textChange.slice(0.. textChange.length-2)
-            val message = "Pain Management:\n$textChange"
-            binding.painManagement.text = message
-            @Suppress("DEPRECATION")
-            binding.painManagement.setBackgroundColor(resources.getColor(R.color.blue))
-        } else {
-            binding.painManagement.text = getString(R.string.pain_management_start_msg)
-            @Suppress("DEPRECATION")
-            binding.painManagement.setBackgroundColor(resources.getColor(R.color.red))
+    
+    private fun setButtonListener(medicalConcernButton: Button, medicalConcern: String, button: Button, buttonList:List<Button>) {
+        when (button) {
+            binding.toradol15 -> {
+                button.setOnClickListener {
+                    changeButtonSelected(button)
+                    incompatibleSelection(button, binding.toradol30)
+                    displaySelections(buttonList, "Pain Management", medicalConcernButton)
+                }
+            }
+            binding.toradol30 -> {
+                button.setOnClickListener {
+                    changeButtonSelected(button)
+                    incompatibleSelection(button, binding.toradol15)
+                    displaySelections(buttonList, "Pain Management", medicalConcernButton)
+                }
+            }
+            else -> {
+                button.setOnClickListener {
+                    changeButtonSelected(button)
+                    displaySelections(buttonList, "Pain Management", medicalConcernButton)
+                }
+            }
         }
     }
 
@@ -80,10 +71,39 @@ class Patient1Fragment : Fragment() {
         @Suppress("DEPRECATION")
         if (button.isSelected) button.setBackgroundColor(resources.getColor(R.color.blue)) else button.setBackgroundColor(resources.getColor(R.color.red))
     }
-
+    
     private fun incompatibleSelection(clickedView: View, incompat: View) {
         if (clickedView.isSelected && incompat.isSelected) {
             incompat.callOnClick()
         }
     }
+    private fun toggleOptions(linearLayout: LinearLayout) {
+        if (linearLayout.visibility == View.VISIBLE)
+            linearLayout.visibility = View.GONE
+        else
+            linearLayout.visibility = View.VISIBLE
+    }
+
+    private fun displaySelections(buttonList: List<Button>, medicalConcern: String, medicalConcernButton: Button) {
+        var textChange = ""
+        for(button in buttonList) {
+            if(button.isSelected) textChange += button.text.toString() + "\n"
+        }
+        if(textChange.isNotEmpty()) {
+            textChange = textChange.slice(0.. textChange.length-2)
+            val message = "$medicalConcern:\n$textChange"
+            medicalConcernButton.text = message
+            @Suppress("DEPRECATION")
+            medicalConcernButton.setBackgroundColor(resources.getColor(R.color.blue))
+        } else {
+            val message = "$medicalConcern:\nClick to Select"
+            medicalConcernButton.text = message
+            @Suppress("DEPRECATION")
+            medicalConcernButton.setBackgroundColor(resources.getColor(R.color.red))
+        }
+    }
+
+
 }
+
+//TODO: can I make patient fragments generic?
