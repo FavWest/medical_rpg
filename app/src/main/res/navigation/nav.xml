@@ -28,4 +28,9 @@
             android:id="@+id/action_selectPatientFragment_to_patient1Fragment"
             app:destination="@id/patient1Fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.favwest.medicalrpg.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
