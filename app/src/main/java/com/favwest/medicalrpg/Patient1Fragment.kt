@@ -1,5 +1,6 @@
 package com.favwest.medicalrpg
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -53,20 +54,20 @@ class Patient1Fragment : Fragment() {
                 button.setOnClickListener {
                     changeButtonSelected(button)
                     incompatibleSelection(button, binding.toradol30)
-                    displaySelections(buttonList, "Pain Management", medicalConcernButton)
+                    displaySelections(buttonList, medicalConcern, medicalConcernButton)
                 }
             }
             binding.toradol30 -> {
                 button.setOnClickListener {
                     changeButtonSelected(button)
                     incompatibleSelection(button, binding.toradol15)
-                    displaySelections(buttonList, "Pain Management", medicalConcernButton)
+                    displaySelections(buttonList, medicalConcern, medicalConcernButton)
                 }
             }
             else -> {
                 button.setOnClickListener {
                     changeButtonSelected(button)
-                    displaySelections(buttonList, "Pain Management", medicalConcernButton)
+                    displaySelections(buttonList, medicalConcern, medicalConcernButton)
                 }
             }
         }
