@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Patient1Fragment">
+    tools:context=".SamFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,10 +20,10 @@
                 style="@style/title"/>
 
             <TextView
-                android:id="@+id/patient1_info"
+                android:id="@+id/sam_info"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/patient1_intro" />
+                android:text="@string/sam_intro" />
 
             <Button
                 android:id="@+id/pain_management"

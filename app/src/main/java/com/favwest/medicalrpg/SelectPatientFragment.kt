@@ -17,7 +17,7 @@ class SelectPatientFragment : Fragment() {
     ): View? {
         val binding: FragmentSelectPatientBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_select_patient, container, false)
         binding.selectSamButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_selectPatientFragment_to_patient1Fragment)
+            Navigation.createNavigateOnClickListener(R.id.action_selectPatientFragment_to_samFragment)
         )
         return binding.root
     }

@@ -38,7 +38,7 @@
             android:id="@+id/select_sam_context"
             app:layout_constraintTop_toBottomOf="@id/select_name_sam"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/patient1_triage_text"
+            android:text="@string/sam_triage_text"
             app:layout_constraintEnd_toStartOf="@id/select_sam_button"
             style="@style/choice_description" />
         
@@ -62,7 +62,7 @@
             android:id="@+id/select_vivian_context"
             app:layout_constraintTop_toBottomOf="@id/select_name_vivian"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/patient2_triage_text"
+            android:text="@string/vivian_triage_text"
             app:layout_constraintEnd_toStartOf="@id/select_vivian_button"
             style="@style/choice_description"/>
 
@@ -86,7 +86,7 @@
             android:id="@+id/select_james_context"
             app:layout_constraintTop_toBottomOf="@id/select_name_james"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/patient3_triage_text"
+            android:text="@string/james_triage_text"
             app:layout_constraintEnd_toStartOf="@id/select_vivian_button"
             style="@style/choice_description"/>
 
@@ -110,7 +110,7 @@
             android:id="@+id/select_lee_context"
             app:layout_constraintTop_toBottomOf="@id/select_name_lee"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/patient4_triage_text"
+            android:text="@string/lee_triage_text"
             app:layout_constraintEnd_toStartOf="@id/select_lee_button"
             style="@style/choice_description"/>
 

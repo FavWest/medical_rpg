@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.favwest.medicalrpg.databinding.FragmentSamBinding
 
-class Patient1Fragment : Fragment() {
+class SamFragment : Fragment() {
     private lateinit var binding: FragmentSamBinding
     private lateinit var painMngButtons: List<Button>
     private lateinit var nauseaButtons: List<Button>

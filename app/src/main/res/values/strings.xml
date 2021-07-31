@@ -7,20 +7,20 @@
     <string name="disclaimer">Note: While the game creators have tried to provide a realistic game and accurate information, this is a free, small-scale project and is not consistently updated or rigorously fact-checked. It may contain errors and is not suitable as a substitute for medical advice or medical education.</string>
     <string name="start_new_game">Start New Game</string>
     <string name="initial_select_msg">You arrive at the ED a few minutes before the shift starts at 1800. Four patients have arrived recently who haven\'t been seen yet. Who would you like to see first?</string>
-    <string name="patient1_triage_text">A 36 year old male with intense flank pain marked as yellow who arrived 12 minutes ago.</string>
+    <string name="sam_triage_text">A 36 year old male with intense flank pain marked as yellow who arrived 12 minutes ago.</string>
     <string name="select_patient_button">See this patient</string>
-    <string name="patient2_triage_text">A 24 year old female with chest pain marked yellow who arrived 5 minutes ago</string>
-    <string name="patient3_triage_text">A 78 year old male on Xaralto who fell and struck his head marked orange</string>
-    <string name="patient4_triage_text">A 30 year old male brought in by ambulance for bugs crawling under his skin,marked orange</string>
+    <string name="vivian_triage_text">A 24 year old female with chest pain marked yellow who arrived 5 minutes ago</string>
+    <string name="james_triage_text">A 78 year old male on Xaralto who fell and struck his head marked orange</string>
+    <string name="lee_triage_text">A 30 year old male brought in by ambulance for bugs crawling under his skin,marked orange</string>
     <string name="place_orders">Place orders</string>
     <string name="place_orders_before_seeing_patients">Place orders before seeing patients</string>
-    <string name="patient1_intro">The man is leaning over the bed, groaning, one hand on his flank. The nurse has placed an IV in his left arm. You introduce yourself and ask "What's going on today?"
+    <string name="sam_intro">"""The man is leaning over the bed, groaning, one hand on his flank. The nurse has placed an IV in his left arm. You introduce yourself and ask "What\'s going on today?"
 
-Between grimaces, the man says, "I've got a lot of pain in my left side. Feels like a kidney stone."
+Between grimaces, the man says, \"I\'ve got a lot of pain in my left side. Feels like a kidney stone.\"
 
 The patient reports 9/10 pain, nausea and no other symptoms.
 
-The patient denies any major medical history or previous surgeries. What medications would you like to order?
+The patient denies any major medical history or previous surgeries. What medications would you like to order?"""
 </string>
     <string name="orders">
 

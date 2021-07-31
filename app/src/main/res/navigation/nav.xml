@@ -15,12 +15,12 @@
             app:destination="@id/selectPatientFragment" />
     </fragment>
     <fragment
-        android:id="@+id/patient1Fragment"
-        android:name="com.favwest.medicalrpg.Patient1Fragment"
-        android:label="fragment_patient1"
-        tools:layout="@layout/fragment_patient1" >
+        android:id="@+id/samFragment"
+        android:name="com.favwest.medicalrpg.SamFragment"
+        android:label="fragment_sam"
+        tools:layout="@layout/fragment_sam" >
         <action
-            android:id="@+id/action_patient1Fragment_to_selectPatientFragment"
+            android:id="@+id/action_samFragment_to_selectPatientFragment"
             app:destination="@id/selectPatientFragment" />
     </fragment>
     <fragment
@@ -29,8 +29,8 @@
         android:label="fragment_select_patient"
         tools:layout="@layout/fragment_select_patient" >
         <action
-            android:id="@+id/action_selectPatientFragment_to_patient1Fragment"
-            app:destination="@id/patient1Fragment" />
+            android:id="@+id/action_selectPatientFragment_to_samFragment"
+            app:destination="@id/samFragment" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
