@@ -15,7 +15,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/patient1_intro"
+                android:id="@+id/title"
+                android:text="@string/sam"
+                style="@style/title"/>
+
+            <TextView
+                android:id="@+id/patient1_info"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/patient1_intro" />
