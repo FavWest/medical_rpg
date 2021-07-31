@@ -70,4 +70,7 @@ The patient denies any major medical history or previous surgeries. What medicat
     <string name="imaging_ct_abdomen">Imaging: CT abdomen</string>
     <string name="select_next_action">Select Next Action</string>
     <string name="sam">Sam</string>
+    <string name="vivian">Vivian</string>
+    <string name="james">James</string>
+    <string name="lee">Lee</string>
 </resources>
