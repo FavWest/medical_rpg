@@ -1,21 +1,18 @@
 package com.favwest.medicalrpg
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import com.favwest.medicalrpg.databinding.FragmentPatient1Binding
+import com.favwest.medicalrpg.databinding.FragmentSamBinding
 
 class Patient1Fragment : Fragment() {
-    private lateinit var binding: FragmentPatient1Binding
+    private lateinit var binding: FragmentSamBinding
     private lateinit var painMngButtons: List<Button>
     private lateinit var nauseaButtons: List<Button>
     private lateinit var fluidButtons: List<Button>
@@ -26,7 +23,7 @@ class Patient1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_patient1, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sam, container, false)
         binding.apply {
             painManagement.setOnClickListener {toggleOptions(painManagementOptions)}
             nausea.setOnClickListener{ toggleOptions(nauseaOptions) }
@@ -41,7 +38,7 @@ class Patient1Fragment : Fragment() {
             for (button in fluidButtons) { setButtonListener(binding.fluids, "Fluids", button, fluidButtons) }
             for (button in testsButtons) { setButtonListener(binding.tests, "Tests", button, testsButtons) }
             signOrders.setOnClickListener {
-                it.findNavController().navigate(R.id.action_patient1Fragment_to_selectPatientFragment)
+                it.findNavController().navigate(R.id.action_samFragment_to_selectPatientFragment)
             }
         }
         return binding.root
