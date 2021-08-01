@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".SelectPatientFragment">
+    tools:context=".selectpatient.SelectPatientFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -139,7 +139,7 @@
             app:layout_constraintStart_toStartOf="parent"
             style="@style/select_name" />
         <TextView
-            android:id="@+id/place_orders_context_text"
+            android:id="@+id/place_orders_context"
             app:layout_constraintTop_toBottomOf="@id/select_name_place_orders"
             app:layout_constraintStart_toStartOf="parent"
             android:text="@string/place_orders_before_seeing_patients"
@@ -150,11 +150,20 @@
         <Button
             android:id="@+id/place_orders_button"
             android:text="@string/place_orders"
-            app:layout_constraintBottom_toBottomOf="@id/place_orders_context_text"
+            app:layout_constraintBottom_toBottomOf="@id/place_orders_context"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/place_orders_context_text"
-            app:layout_constraintTop_toTopOf="@+id/place_orders_context_text"
+            app:layout_constraintStart_toEndOf="@id/place_orders_context"
+            app:layout_constraintTop_toTopOf="@+id/place_orders_context"
             style="@style/select_patient"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/patient_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/place_orders_context"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

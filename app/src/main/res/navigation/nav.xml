@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectPatientFragment"
-        android:name="com.favwest.medicalrpg.SelectPatientFragment"
+        android:name="com.favwest.medicalrpg.selectpatient.SelectPatientFragment"
         android:label="fragment_select_patient"
         tools:layout="@layout/fragment_select_patient" >
         <action

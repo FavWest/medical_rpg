@@ -40,10 +40,10 @@ class SamFragment : Fragment() {
             for (button in testsButtons) { setButtonListener(binding.tests, "Tests", button, testsButtons) }
             signOrders.setOnClickListener {
                 val prefs = activity?.getPreferences(Context.MODE_PRIVATE)
-                val currentTime = prefs?.getInt(SelectPatientViewModel.MINUTES_ELAPSED, 0)?:0
+                val currentTime = prefs?.getInt(TimeCalc.MINUTES_ELAPSED, 0)?:0
                 if (prefs != null) {
                     with(prefs.edit()) {
-                        putInt(SelectPatientViewModel.MINUTES_ELAPSED, currentTime + 15)
+                        putInt(TimeCalc.MINUTES_ELAPSED, currentTime + 15)
                         apply()
                     }
                 }
