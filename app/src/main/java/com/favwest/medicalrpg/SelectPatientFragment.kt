@@ -1,5 +1,6 @@
 package com.favwest.medicalrpg
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -19,14 +20,12 @@ class SelectPatientFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_select_patient, container, false)
-        binding.selectSamButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_selectPatientFragment_to_samFragment)
-        )
+        binding.selectSamButton.setOnClickListener (Navigation.createNavigateOnClickListener(R.id.action_selectPatientFragment_to_samFragment))
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.currentTime.text = vm.getCurrentTimeString()
+        binding.currentTime.text = vm.getCurrentTimeString(this.requireActivity())
     }
 }

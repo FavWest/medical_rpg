@@ -1,5 +1,6 @@
 package com.favwest.medicalrpg
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -38,6 +39,14 @@ class SamFragment : Fragment() {
             for (button in fluidButtons) { setButtonListener(binding.fluids, "Fluids", button, fluidButtons) }
             for (button in testsButtons) { setButtonListener(binding.tests, "Tests", button, testsButtons) }
             signOrders.setOnClickListener {
+                val prefs = activity?.getPreferences(Context.MODE_PRIVATE)
+                val currentTime = prefs?.getInt(SelectPatientViewModel.MINUTES_ELAPSED, 0)?:0
+                if (prefs != null) {
+                    with(prefs.edit()) {
+                        putInt(SelectPatientViewModel.MINUTES_ELAPSED, currentTime + 15)
+                        apply()
+                    }
+                }
                 it.findNavController().navigate(R.id.action_samFragment_to_selectPatientFragment)
             }
         }
