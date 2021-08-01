@@ -73,4 +73,5 @@ The patient denies any major medical history or previous surgeries. What medicat
     <string name="vivian">Vivian</string>
     <string name="james">James</string>
     <string name="lee">Lee</string>
+    <string name="placeholder">PLACEHOLDER</string>
 </resources>
