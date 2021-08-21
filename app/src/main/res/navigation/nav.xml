@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/samFragment"
-        android:name="com.favwest.medicalrpg.SamFragment"
+        android:name="com.favwest.medicalrpg.sam.SamFragment"
         android:label="fragment_sam"
         tools:layout="@layout/fragment_sam" >
         <action

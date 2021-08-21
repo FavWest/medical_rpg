@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.favwest.medicalrpg.R
+import com.favwest.medicalrpg.info.SelectPatientInfo
 
-class SelectPatientAdapter(private val patientList: Array<String>): RecyclerView.Adapter<ViewHolder>() {
+class SelectPatientAdapter(private val patientList: Array<SelectPatientInfo>): RecyclerView.Adapter<ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
@@ -22,8 +23,9 @@ class SelectPatientAdapter(private val patientList: Array<String>): RecyclerView
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.name.text = patientList[position]
-        viewHolder.context.text = patientList[position]
+        viewHolder.name.text = patientList[position].name
+        viewHolder.context.text = patientList[position].context
+        viewHolder.button.text = patientList[position].buttonText
         viewHolder.button.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_selectPatientFragment_to_samFragment))
     }
 

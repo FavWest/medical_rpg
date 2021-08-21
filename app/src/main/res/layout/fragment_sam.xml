@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SamFragment">
+    tools:context=".sam.SamFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,8 +22,7 @@
             <TextView
                 android:id="@+id/sam_info"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/sam_intro" />
+                android:layout_height="match_parent" />
 
             <Button
                 android:id="@+id/pain_management"
@@ -78,21 +77,6 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <Button
-                    android:id="@+id/zofran"
-                    android:text="@string/zofran_ondansetron_4mg_iv"
-                    style="@style/order_button"
-                    android:layout_marginTop="16dp"/>
-
-                <Button
-                    android:id="@+id/benadryl"
-                    android:text="@string/benadryl_diphenhydramine_12_5_mg_iv"
-                    style="@style/order_button"/>
-
-                <Button
-                    android:id="@+id/phenergan"
-                    android:text="@string/phenergan_12_5_mg_iv_piggyback"
-                    style="@style/order_button"/>
             </LinearLayout>
 
         <Button

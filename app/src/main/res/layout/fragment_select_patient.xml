@@ -36,131 +36,131 @@
             app:layout_constraintTop_toBottomOf="@id/select_context"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <TextView
-            android:id="@+id/select_name_sam"
-            android:text="@string/sam"
-            app:layout_constraintTop_toBottomOf="@id/select_context"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/select_name" />
+<!--        <TextView-->
+<!--            android:id="@+id/select_name_sam"-->
+<!--            android:text="@string/sam"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_context"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            style="@style/select_name" />-->
 
-        <TextView
-            android:id="@+id/select_sam_context"
-            app:layout_constraintTop_toBottomOf="@id/select_name_sam"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/sam_triage_text"
-            app:layout_constraintEnd_toStartOf="@id/select_sam_button"
-            style="@style/choice_description" />
-        
-        <Button
-            android:id="@+id/select_sam_button"
-            android:text="@string/select_patient_button"
-            app:layout_constraintBottom_toBottomOf="@+id/select_sam_context"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/select_sam_context"
-            app:layout_constraintTop_toTopOf="@+id/select_sam_context"
-            style="@style/select_patient" />
+<!--        <TextView-->
+<!--            android:id="@+id/select_sam_context"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_name_sam"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:text="@string/sam_triage_text"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/select_sam_button"-->
+<!--            style="@style/choice_description" />-->
+<!--        -->
+<!--        <Button-->
+<!--            android:id="@+id/select_sam_button"-->
+<!--            android:text="@string/select_patient_button"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/select_sam_context"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/select_sam_context"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/select_sam_context"-->
+<!--            style="@style/select_patient" />-->
 
-        <TextView
-            android:id="@+id/select_name_vivian"
-            android:text="@string/vivian"
-            app:layout_constraintTop_toBottomOf="@id/select_sam_context"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/select_name" />
+<!--        <TextView-->
+<!--            android:id="@+id/select_name_vivian"-->
+<!--            android:text="@string/vivian"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_sam_context"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            style="@style/select_name" />-->
 
-        <TextView
-            android:id="@+id/select_vivian_context"
-            app:layout_constraintTop_toBottomOf="@id/select_name_vivian"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/vivian_triage_text"
-            app:layout_constraintEnd_toStartOf="@id/select_vivian_button"
-            style="@style/choice_description"/>
+<!--        <TextView-->
+<!--            android:id="@+id/select_vivian_context"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_name_vivian"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:text="@string/vivian_triage_text"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/select_vivian_button"-->
+<!--            style="@style/choice_description"/>-->
 
-        <Button
-            android:id="@+id/select_vivian_button"
-            android:text="@string/select_patient_button"
-            app:layout_constraintBottom_toBottomOf="@id/select_vivian_context"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/select_vivian_context"
-            app:layout_constraintTop_toTopOf="@+id/select_vivian_context"
-            style="@style/select_patient"/>
+<!--        <Button-->
+<!--            android:id="@+id/select_vivian_button"-->
+<!--            android:text="@string/select_patient_button"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/select_vivian_context"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/select_vivian_context"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/select_vivian_context"-->
+<!--            style="@style/select_patient"/>-->
 
-        <TextView
-            android:id="@+id/select_name_james"
-            android:text="@string/james"
-            app:layout_constraintTop_toBottomOf="@id/select_vivian_context"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/select_name" />
-        
-        <TextView
-            android:id="@+id/select_james_context"
-            app:layout_constraintTop_toBottomOf="@id/select_name_james"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/james_triage_text"
-            app:layout_constraintEnd_toStartOf="@id/select_vivian_button"
-            style="@style/choice_description"/>
+<!--        <TextView-->
+<!--            android:id="@+id/select_name_james"-->
+<!--            android:text="@string/james"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_vivian_context"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            style="@style/select_name" />-->
+<!--        -->
+<!--        <TextView-->
+<!--            android:id="@+id/select_james_context"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_name_james"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:text="@string/james_triage_text"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/select_vivian_button"-->
+<!--            style="@style/choice_description"/>-->
 
-        <Button
-            android:id="@+id/select_james_button"
-            android:text="@string/select_patient_button"
-            app:layout_constraintBottom_toBottomOf="@id/select_james_context"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/select_james_context"
-            app:layout_constraintTop_toTopOf="@+id/select_james_context"
-            style="@style/select_patient"/>
+<!--        <Button-->
+<!--            android:id="@+id/select_james_button"-->
+<!--            android:text="@string/select_patient_button"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/select_james_context"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/select_james_context"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/select_james_context"-->
+<!--            style="@style/select_patient"/>-->
 
-        <TextView
-            android:id="@+id/select_name_lee"
-            android:text="@string/lee"
-            app:layout_constraintTop_toBottomOf="@id/select_james_context"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/select_name" />
-        
-        <TextView
-            android:id="@+id/select_lee_context"
-            app:layout_constraintTop_toBottomOf="@id/select_name_lee"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/lee_triage_text"
-            app:layout_constraintEnd_toStartOf="@id/select_lee_button"
-            style="@style/choice_description"/>
+<!--        <TextView-->
+<!--            android:id="@+id/select_name_lee"-->
+<!--            android:text="@string/lee"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_james_context"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            style="@style/select_name" />-->
+<!--        -->
+<!--        <TextView-->
+<!--            android:id="@+id/select_lee_context"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_name_lee"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:text="@string/lee_triage_text"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/select_lee_button"-->
+<!--            style="@style/choice_description"/>-->
 
-        <Button
-            android:id="@+id/select_lee_button"
-            android:text="@string/select_patient_button"
-            app:layout_constraintBottom_toBottomOf="@id/select_lee_context"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/select_lee_context"
-            app:layout_constraintTop_toTopOf="@+id/select_lee_context"
-            style="@style/select_patient"/>
+<!--        <Button-->
+<!--            android:id="@+id/select_lee_button"-->
+<!--            android:text="@string/select_patient_button"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/select_lee_context"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/select_lee_context"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/select_lee_context"-->
+<!--            style="@style/select_patient"/>-->
 
-        <TextView
-            android:id="@+id/select_name_place_orders"
-            android:text="@string/place_orders"
-            app:layout_constraintTop_toBottomOf="@id/select_lee_context"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/select_name" />
-        <TextView
-            android:id="@+id/place_orders_context"
-            app:layout_constraintTop_toBottomOf="@id/select_name_place_orders"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/place_orders_before_seeing_patients"
-            app:layout_constraintEnd_toStartOf="@id/place_orders_button"
-            style="@style/choice_description"
-            android:layout_marginBottom="32dp"/>
+<!--        <TextView-->
+<!--            android:id="@+id/select_name_place_orders"-->
+<!--            android:text="@string/place_orders"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_lee_context"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            style="@style/select_name" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/place_orders_context"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/select_name_place_orders"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:text="@string/place_orders_before_seeing_patients"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/place_orders_button"-->
+<!--            style="@style/choice_description"-->
+<!--            android:layout_marginBottom="32dp"/>-->
 
-        <Button
-            android:id="@+id/place_orders_button"
-            android:text="@string/place_orders"
-            app:layout_constraintBottom_toBottomOf="@id/place_orders_context"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/place_orders_context"
-            app:layout_constraintTop_toTopOf="@+id/place_orders_context"
-            style="@style/select_patient"/>
+<!--        <Button-->
+<!--            android:id="@+id/place_orders_button"-->
+<!--            android:text="@string/place_orders"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/place_orders_context"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/place_orders_context"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/place_orders_context"-->
+<!--            style="@style/select_patient"/>-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/patient_list_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/place_orders_context"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/current_time"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>

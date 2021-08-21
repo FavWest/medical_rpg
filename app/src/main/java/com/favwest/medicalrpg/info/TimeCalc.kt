@@ -1,4 +1,4 @@
-package com.favwest.medicalrpg
+package com.favwest.medicalrpg.info
 
 import android.app.Activity
 import android.content.Context

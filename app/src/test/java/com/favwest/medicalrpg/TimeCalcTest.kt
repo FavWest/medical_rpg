@@ -1,5 +1,6 @@
 package com.favwest.medicalrpg
 
+import com.favwest.medicalrpg.info.TimeCalc
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
