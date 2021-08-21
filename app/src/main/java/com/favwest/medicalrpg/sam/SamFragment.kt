@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
-import androidx.core.view.marginTop
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -40,14 +39,9 @@ class SamFragment : Fragment() {
             fluids.setOnClickListener{ toggleOptions(fluidsOptions) }
             tests.setOnClickListener{ toggleOptions(testsOptions) }
 
-            var zofran = Button(this@SamFragment.context)
-            zofran.text = getString(R.string.zofran_ondansetron_4mg_iv)
-            zofran.marginTop = "16dp"
-            nauseaOptions.addView(zofran)
-
             //Get a list of buttons for each category
             painMngButtons = listOf(morphine, dilaudid, toradol15, toradol30, lidocaine)
-            nauseaButtons = listOf()//(zofran, benadryl, phenergan)
+            nauseaButtons = listOf(zofran, benadryl, phenergan)
             fluidButtons = listOf(salineBolus, ringersBolus, saline100mL, ringer100mL)
             testsButtons = listOf(cbc, cmp, lipase, lacticAcid, urinalysis, doa, kidney, gallbladder, abdomen)
 

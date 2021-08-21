@@ -77,6 +77,21 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
+                <Button
+                    android:id="@+id/zofran"
+                    android:text="@string/zofran_ondansetron_4mg_iv"
+                    style="@style/order_button"
+                    android:layout_marginTop="16dp"/>
+
+                <Button
+                    android:id="@+id/benadryl"
+                    android:text="@string/benadryl_diphenhydramine_12_5_mg_iv"
+                    style="@style/order_button"/>
+
+                <Button
+                    android:id="@+id/phenergan"
+                    android:text="@string/phenergan_12_5_mg_iv_piggyback"
+                    style="@style/order_button"/>
             </LinearLayout>
 
         <Button
