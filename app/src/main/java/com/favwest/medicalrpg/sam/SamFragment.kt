@@ -67,6 +67,11 @@ class SamFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.currentTime.text = getString(R.string.current_time, vm.getCurrentTimeString(this.requireActivity()))
+    }
+
     
     private fun setButtonListener(medicalConcernButton: Button, medicalConcern: String, button: Button, buttonList:List<Button>) {
         when (button) {
