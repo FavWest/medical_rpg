@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">MedicalRPG</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!-- Title Page-->
     <string name="game_title">Emergency Department Doctor</string>
     <string name="short_game_description">You\'re the doctor at the ED. Make treatment decisions for your patients</string>
     <string name="disclaimer">Note: While the game creators have tried to provide a realistic game and accurate information, this is a free, small-scale project and is not consistently updated or rigorously fact-checked. It may contain errors and is not suitable as a substitute for medical advice or medical education.</string>
     <string name="start_new_game">Start New Game</string>
+    <string name="continue_msg">Continue</string>
+
+<!-- Select Patient-->
     <string name="initial_select_msg">You arrive at the ED a few minutes before the shift starts at 1800. Four patients have arrived recently who haven\'t been seen yet. Who would you like to see first?</string>
     <string name="sam_triage_text">A 36 year old male with intense flank pain marked as yellow who arrived 12 minutes ago.</string>
     <string name="select_patient_button">See this patient</string>
@@ -14,7 +17,10 @@
     <string name="lee_triage_text">A 30 year old male brought in by ambulance for bugs crawling under his skin,marked orange</string>
     <string name="place_orders">Place orders</string>
     <string name="place_orders_before_seeing_patients">Place orders before seeing patients</string>
-    <string name="sam_intro">"""The man is leaning over the bed, groaning, one hand on his flank. The nurse has placed an IV in his left arm. You introduce yourself and ask "What\'s going on today?"
+
+<!--Sam-->
+    <string name="sam">Sam</string>
+    <string name="sam_intro">"""The man is leaning over the bed, groaning, one hand on his flank. The nurse has placed an IV in his left arm. You introduce yourself and ask \"What\'s going on today?\"
 
 Between grimaces, the man says, \"I\'ve got a lot of pain in my left side. Feels like a kidney stone.\"
 
@@ -22,31 +28,17 @@ The patient reports 9/10 pain, nausea and no other symptoms.
 
 The patient denies any major medical history or previous surgeries. What medications would you like to order?"""
 </string>
-    <string name="orders">
 
-            Non-opioid analgesics: Toradol (ketorolac) 15 mg or 30 mg, and/or lidocaine IV piggyback
-
-            Nausea medicine: Zofran (ondansetron) 4mg IV, Benadryl (diphenhydramine) 12.5 mg IV, Phenergan 12.5 mg IV piggyback.
-
-            Fluids: Normal saline (0.9% sodium chloride) 1 liter bolus, Lactated Ringers 1 liter bolus, Normal saline (0.9% sodium chloride) 100 mL per hour, Lactated Ringers 100 mL per hour
-
-            What tests would you order?
-            Blood work: CBC, CMP or BMP, lipase, lactic acid
-            Urine: urinalysis, DOA
-            Imaging: Ultrasound (kidney), ultrasound (gallbladder), CT abdomen</string>
+<!--Pain Medicine-->
+    <string name="pain_management_start_msg">Pain Management:\nClick to Select</string>
     <string name="morphine_4mg">morphine 4mg</string>
     <string name="dilaudid_hydromorphone_0_5_mg">Dilaudid (hydromorphone) 0.5 mg</string>
-    <string name="complete">Complete</string>
-    <string name="sign_orders">Sign Orders and Finalize Treatment Decision</string>
-    <string name="pain_management_start_msg">Pain Management:\nClick to Select</string>
-    <string name="no_medications">no medications</string>
     <string name="lidocaine_iv_piggyback">Lidocaine IV piggyback</string>
     <string name="toradol_ketorolac_30_mg">Toradol (ketorolac) 30 mg</string>
     <string name="toradol_ketorolac_15_mg">Toradol (ketorolac) 15 mg</string>
-    <string name="continue_msg">Continue</string>
-    <string name="your_shift_so_far">Your shift so far:</string>
-    <string name="_18_00_00">18:00:00</string>
-    <string name="view_shift_history">View Shift History</string>
+
+
+
     <string name="nausea_medicine">Nausea Medicine</string>
     <string name="nausea_medicine_start_msg">Nausea Medicine:\nClick to Select</string>
     <string name="zofran_ondansetron_4mg_iv">Zofran (ondansetron) 4mg IV</string>
@@ -69,9 +61,22 @@ The patient denies any major medical history or previous surgeries. What medicat
     <string name="imaging_ultrasound_gallbladder">Imaging: ultrasound (gallbladder)</string>
     <string name="imaging_ct_abdomen">Imaging: CT abdomen</string>
     <string name="select_next_action">Select Next Action</string>
-    <string name="sam">Sam</string>
+
+<!--Sign Orders-->
+    <string name="sign_orders">Sign Orders and Finalize Treatment Decision</string>
+
+<!--Vivian-->
     <string name="vivian">Vivian</string>
+
+<!--James-->
     <string name="james">James</string>
+
+<!--Lee-->
     <string name="lee">Lee</string>
-    <string name="placeholder">PLACEHOLDER</string>
+
+<!--Shift History-->
+    <string name="current_time">CURRENT TIME: %s</string>
+    <string name="your_shift_so_far">Your shift so far:</string>
+    <string name="_18_00_00">18:00:00</string>
+    <string name="view_shift_history">View Shift History</string>
 </resources>

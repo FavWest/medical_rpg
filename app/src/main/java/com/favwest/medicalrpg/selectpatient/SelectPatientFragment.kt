@@ -28,7 +28,7 @@ class SelectPatientFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.currentTime.text = vm.getCurrentTimeString(this.requireActivity())
+        binding.currentTime.text = getString(R.string.current_time, vm.getCurrentTimeString(this.requireActivity()))
         val patientList = patients.getPatientList(this)
         binding.patientListRecyclerView.adapter = SelectPatientAdapter(patientList)
     }
