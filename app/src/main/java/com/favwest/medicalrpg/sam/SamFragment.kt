@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.favwest.medicalrpg.databinding.FragmentSamBinding
+import com.favwest.medicalrpg.info.TimeCalc
 
 class SamFragment : Fragment() {
     private lateinit var binding: FragmentSamBinding
