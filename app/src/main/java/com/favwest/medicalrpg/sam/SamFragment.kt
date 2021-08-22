@@ -2,15 +2,14 @@ package com.favwest.medicalrpg.sam
 
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.favwest.medicalrpg.R
 import com.favwest.medicalrpg.databinding.FragmentSamBinding
 import com.favwest.medicalrpg.info.TimeCalc
@@ -64,6 +63,7 @@ class SamFragment : Fragment() {
                 it.findNavController().navigate(R.id.action_samFragment_to_selectPatientFragment)
             }
         }
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -137,6 +137,14 @@ class SamFragment : Fragment() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())||super.onOptionsItemSelected(item)
+    }
 
 }
 
