@@ -1,21 +1,16 @@
 package com.favwest.medicalrpg
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.favwest.medicalrpg.databinding.FragmentTitleBinding
-import com.favwest.medicalrpg.info.TimeCalc
-import com.favwest.medicalrpg.selectpatient.SelectPatientFragment
 
 class TitleFragment : Fragment() {
 
@@ -27,15 +22,14 @@ class TitleFragment : Fragment() {
         binding.startButton.setOnClickListener {
             val dialogBuilder = AlertDialog.Builder(requireContext())
             dialogBuilder.setMessage("Do you want to start a new game? Previous game data will be deleted")
-                .setPositiveButton("Start New Game", DialogInterface.OnClickListener {
-                        _, _ ->
+                .setPositiveButton("Start New Game") { _, _ ->
                     val prefs = activity?.getPreferences(Context.MODE_PRIVATE)
                     prefs?.edit()?.clear()?.apply()
                     findNavController().navigate(R.id.action_titleFragment_to_selectPatientFragment)
-                })
-                .setNegativeButton("Cancel", DialogInterface.OnClickListener {
-                        dialog, _ -> dialog.cancel()
-                })
+                }
+                .setNegativeButton("Cancel") { dialog, _ ->
+                    dialog.cancel()
+                }
             val alert = dialogBuilder.create()
             alert.setTitle("Delete Previous Game Data and Restart?")
             alert.show()
