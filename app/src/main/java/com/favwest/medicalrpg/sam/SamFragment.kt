@@ -1,6 +1,6 @@
 package com.favwest.medicalrpg.sam
 
-import android.content.Context
+import android.app.Activity
 import android.os.Bundle
 import android.view.*
 import android.widget.Button
@@ -12,7 +12,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.favwest.medicalrpg.R
 import com.favwest.medicalrpg.databinding.FragmentSamBinding
-import com.favwest.medicalrpg.info.TimeCalc
 
 class SamFragment : Fragment() {
     private val vm : SamViewModel by viewModels()
@@ -30,7 +29,7 @@ class SamFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sam, container, false)
 
         binding.apply {
-            samInfo.text = getString(vm.samInfo)
+            samInfo.text = getString(vm.getSamInfo(activity as Activity))
 
             //Create onClick listeners for category buttons
             painManagement.setOnClickListener {toggleOptions(painManagementOptions)}
@@ -52,14 +51,7 @@ class SamFragment : Fragment() {
 
             //Set click listener for Sign Orders button
             signOrders.setOnClickListener {
-                val prefs = activity?.getPreferences(Context.MODE_PRIVATE)
-                val currentTime = prefs?.getInt(TimeCalc.MINUTES_ELAPSED, 0)?:0
-                if (prefs != null) {
-                    with(prefs.edit()) {
-                        putInt(TimeCalc.MINUTES_ELAPSED, currentTime + 15)
-                        apply()
-                    }
-                }
+                vm.updatePrefs(activity as Activity)
                 it.findNavController().navigate(R.id.action_samFragment_to_selectPatientFragment)
             }
         }
@@ -147,5 +139,8 @@ class SamFragment : Fragment() {
     }
 
 }
+
+const val SAM_INITIAL_VISIT = "SamInitialVisit"
+
 
 //TODO: can I make patient fragments generic?

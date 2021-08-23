@@ -28,6 +28,7 @@ The patient reports 9/10 pain, nausea and no other symptoms.
 
 The patient denies any major medical history or previous surgeries. What medications would you like to order?"""
 </string>
+    <string name="sam_no_change">Sam\'s condition has not changed since your last visit. </string>
 
 <!--Pain Medicine-->
     <string name="pain_management_start_msg">Pain Management:\nClick to Select</string>
